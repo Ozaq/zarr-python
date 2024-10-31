@@ -1081,7 +1081,7 @@ class DirectoryStore(Store):
         file reading logic.
         """
         with open(fn, "rb") as f:
-            print(f'OPEN CALLED: {{"accesstime": {time.time_ns()}, "pid": {os.getpid()}, "path": {fn}}}')
+            print(f'OPEN CALLED: {{"accesstime": {time.time_ns()}, "pid": {os.getpid()}, "path": "{fn}"}}')
             return f.read()
 
     @staticmethod
